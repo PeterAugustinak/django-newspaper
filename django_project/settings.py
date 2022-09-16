@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # local
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
+    'articles',
 ]
 
 MIDDLEWARE = [
@@ -116,7 +117,7 @@ AUTH_USER_MODEL = "accounts.CustomUser"
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Bratislava'
 
 USE_I18N = True
 
