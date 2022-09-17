@@ -25,4 +25,5 @@ class Article(models.Model):
 
     @property
     def shortened_body(self):
-        return f'{self.body[:200]} ...'
+        return f'{self.body[:200]} ...' if len(self.body) > 200 else self.body
+

@@ -6,7 +6,8 @@
     <h1>New Article</h1>
     <form action="" method="post">{% csrf_token %}
     {{ form|crispy }}
-    <button class="btn btn-success ml-2" type="submit">Save</button>
+    <p>Writting Author: {{ user }}</p>
+        <button class="btn btn-success ml-2" type="submit">Save</button>
     </form>
 
 {% endblock content %}

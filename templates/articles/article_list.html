@@ -3,8 +3,9 @@
 {% block title %}Articles{%  endblock title %}
 
 {% block content %}
-<h1>Articles</h1>
-
+<div>
+    <h1>Articles</h1>
+    <a href="{%  url 'article_create' %}" class="nav-link px-2 link-dark"> + New Article</a><br/>
     {% for article in article_list %}
         <div class="card">
             <div class="card-header">
