@@ -25,5 +25,22 @@ class Article(models.Model):
 
     @property
     def shortened_body(self):
-        return f'{self.body[:200]} ...' if len(self.body) > 200 else self.body
+        shortened = self.body[:200]
+        return shortened if len(self.body) > 200 else f'{shortened} ..'
 
+
+class Comment(models.Model):
+    article = models.ForeignKey('Article', on_delete=models.CASCADE)
+    text = models.TextField()
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        )
+    date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        shortened = self.text[:100]
+        return shortened if len(self.text) < 100 else f'{shortened} ..'
+
+    def get_absolute_url(self):
+        return reverse("article_list")
