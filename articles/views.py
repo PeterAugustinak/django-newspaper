@@ -14,6 +14,7 @@ from .froms import CommentForm
 
 TEMP_PATH = 'articles/'
 
+
 class ArticleListView(ListView):
     model = Article
     template_name = f"{TEMP_PATH}/article_list.html"

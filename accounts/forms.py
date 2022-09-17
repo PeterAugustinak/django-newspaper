@@ -12,6 +12,7 @@ class CustomUserCreationForm(UserCreationForm):
             "age",
         )
 
+
 class CustomUserChangeForm(UserChangeForm):
     model = CustomUser
     fields = (
