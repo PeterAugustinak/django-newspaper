@@ -12,7 +12,7 @@ Newspaper app from the book Django for Beginners by William S. Vincent
 - python manage.py runserver
 - open the suggested link
 
-Technologies used:
+## Technologies used:
 - Python Django
 - bootstrap
 
